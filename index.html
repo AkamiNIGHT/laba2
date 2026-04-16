@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSI Katana 17 B13V - Купить</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">MSI Katana 17 B13V</div>
+            <nav class="nav">
+                <a href="#">О ноутбуке</a>
+                <a href="#">Галерея</a>
+                <a href="#">FAQ</a>
+                <a href="#">Заявка</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-buy-top">Купить</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <section class="product-info container">
+            <span class="badge">2024 / Intel Core i7-13620H</span>
+            <h1>MSI Katana 17 B13V</h1>
+            <p class="description">Мощный 17.3" игровой ноутбук с видеокартой NVIDIA GeForce RTX 4060, процессором Intel Core i7 и системой охлаждения Cooler Boost 5.</p>
+            
+            <div class="price-block">
+                <span class="price-label">Цена по акции:</span>
+                <div class="price">129 990 ₽</div>
+                <span class="stock-status">В наличии</span>
+            </div>
+
+            <div class="gallery">
+                <div class="main-img">
+                    <img src="1.png" alt="MSI Katana" id="mainPhoto">
+                </div>
+                <div class="thumbnails">
+                    <img src="1.png" alt="Вид 1" class="thumb">
+                    <img src="2.png" alt="Вид 2" class="thumb">
+                    <img src="3.png" alt="Вид 3" class="thumb">
+                    <img src="4.png" alt="Вид 4" class="thumb">
+                </div>
+            </div>
+
+            <div class="features">
+                <details>
+                    <summary>Что на счет гарантии?</summary>
+                    <p>Гарантия действует на протяжении 1 года с момента приобретения товара.</p>
+                </details>
+                <details>
+                    <summary>Отличная надежность</summary>
+                    <p>Прошел строгие тесты качества MSI.</p>
+                </details>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="order-form container">
+            <h2>Оформить заказ</h2>
+            <form>
+                <input type="text" placeholder="Имя" required>
+                <input type="text" placeholder="Фамилия" required>
+                <input type="email" placeholder="Эл. почта" required>
+                <input type="text" placeholder="Область/район" required>
+                <input type="text" placeholder="Город" required>
+                <input type="text" placeholder="Адрес" required>
+                
+                <div class="checkbox-group">
+                    <label><input type="checkbox" required> Согласие на обработку персональных данных</label>
+                    <label><input type="checkbox"> Получать рассылку</label>
+                </div>
+                
+                <button type="submit" class="btn-submit">Заказать</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Все права защищены. Предложение не является публичной офертой.</p>
+    </footer>
+
+    <script>
+        const mainPhoto = document.getElementById('mainPhoto');
+        const thumbnails = document.querySelectorAll('.thumb');
+
+        thumbnails.forEach(photo => {
+            photo.addEventListener('click', function() {
+                mainPhoto.style.opacity = 0;
+                setTimeout(() => {
+                    mainPhoto.src = this.src;
+                    mainPhoto.style.opacity = 1;
+                }, 200);
+            });
+        });
+    </script>
+
+</body>
+</html>
